@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    background-color:#202020;
+    color:red;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: "header header header"
+                         "sidebar-left main sidebar-right"
+                         "footer footer footer";
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.item-menu:hover, label:hover, a:hover {
+    color:hotpink;
+    cursor: pointer;
+}
+
+a {
+    color: red;
+}
+
+.item-menu {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.header {
+    grid-area: header;
+    margin: 10px 30px;
+    border: red 2px solid;
+}
+
+.header-title {
+    font-size: 2rem;
+}
+.main {
+    padding: 5vh 5vw;
+    overflow-y: scroll;
+    /* color:lightgoldenrodyellow; */
+}
+
+.sidebar {
+    /* background-image: url(./image.png);
+    background-size: cover;
+    background-repeat: repeat;
+    background-size: 27%; */
+}
+
+.sidebar-left {
+    grid-area: sidebar-left;
+
+    margin-left: 30px;
+}
+
+.sidebar-right {
+    grid-area: sidebar-right;
+
+    margin-right: 30px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+}
